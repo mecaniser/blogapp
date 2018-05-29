@@ -1,0 +1,9 @@
+.card{
+	background-color: grey;
+}
+.container.main{
+	margin-top: 60px;
+}
+.ui.vertical.segment:last-child {
+width: 100%;
+    }
