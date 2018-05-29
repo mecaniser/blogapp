@@ -1,8 +1,10 @@
 # RESTful Routing
 
 ## Introduction 
-* Defining REST and explain why is it so important
+* Defining REST and explain why it is so important
+
 * List all 7 RESTful routes
+
 * Show examples in practices 
 
 _REST is a mapping between HTTP routes and CRUD (CREATE/READ/UPDATE/DELETE)_
