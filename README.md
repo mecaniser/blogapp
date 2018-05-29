@@ -45,3 +45,5 @@ _REST is a mapping between HTTP routes and CRUD (CREATE/READ/UPDATE/DELETE)_
 > Include SematicUI
 
 > Add simple nav
+# blogapp
+Creating my blog web page.
