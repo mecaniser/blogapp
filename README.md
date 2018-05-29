@@ -1,7 +1,7 @@
-# RESTful Rounting
+# RESTful Routing
 
 ## Introduction 
-* Defining REST and explain why is it so omportant
+* Defining REST and explain why is it so important
 * List all 7 RESTful routes
 * Show examples in practices 
 
@@ -9,22 +9,22 @@ _REST is a mapping between HTTP routes and CRUD (CREATE/READ/UPDATE/DELETE)_
 
 **Building a Blog From scratch**
 ---
- > CREATE _(create new blg)_
+ > CREATE _(create new blog)_
 
- > READ /readALlBlogs _(read all blgs)_
+ > READ /read All Blogs _ (read all blogs) 
 
- > UPDATE /updateBLog/:id _(spcfc blg by id)_
+ > UPDATE /updateBLog/:id _ (specific blog by id)_
 
- > DELETE /deleteBlog/:id _(spcfc blg by id)_
+ > DELETE /deleteBlog/:id _ (specific blog by id)_
 
  ___
-* `Home route` Index */MockUp* **GET** _List of all MockUp_
-* `NEW route`  */MockUp/new* **GET** _Show new MockUp form_
-* `CREATE route` */MockUp* **POST** _Create new MockUp and redirect somewhere_
-* `SHOW route` */MockUp/:id* **GET** _Show info about spcfc MockUp_
-* `EDIT route` */MockUp/:id/edit* **GET** _Show Edit form for one MockUp_
-* `UPDATE route` Index */MockUp/:id* **PUT** _Update a particular MockUp_
-* `DELETE route` Index */MockUp/:id* **DELETE** _Delete a particular  MockUp and redirect somewhere_
+* `Home route` Index */Mockup* **GET** _List of all MockUp_
+* `NEW route`  */Mockup/new* **GET** _Show new MockUp form_
+* `CREATE route` */Mockup* **POST** _Create new MockUp and redirect somewhere_
+* `SHOW route` */Mockup/:id* **GET** _Show info about spcfc MockUp_
+* `EDIT route` */Mockup/:id/edit* **GET** _Show Edit form for one MockUp_
+* `UPDATE route` Index */Mockup/:id* **PUT** _Update a particular MockUp_
+* `DELETE route` Index */Mockup/:id* **DELETE** _Delete a particular MockUp and redirect somewhere_
  ___
 
  ## Blog Index 
@@ -35,12 +35,12 @@ _REST is a mapping between HTTP routes and CRUD (CREATE/READ/UPDATE/DELETE)_
 
  > Add Index routes and templates
 
- > Add a simple NavBar
+ > Add a simple Navbar
 # Basic Layout 
 
 ## UI Framework Used **SEMANTIC UI**
 
-> Add Header ans footer partials
+> Add Header and footer partials
 
 > Include SematicUI
 
