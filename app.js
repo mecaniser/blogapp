@@ -1,11 +1,12 @@
-var bodyParser = require("body-parser");
-var mongoose = require("mongoose");
-var express = require("express");
-var ejs = require('ejs')
-var app = express();
-var PORT = process.env.PORT || 3036;
+var bodyParser  = require("body-parser");
+var mongoose    = require("mongoose");
+var express     = require("express");
+var ejs         = require('ejs')
+var app         = express();
+var PORT        = process.env.PORT || 3036;
 
 mongoose.connect("mongodb://localhost/mecaniser_rest_app");
+
 //App config
 
 app.set("view engine", "ejs");
@@ -13,6 +14,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 // Mogoose - model config
 var blgSchema = new mongoose.Schema({
     title: String,
@@ -63,7 +65,7 @@ app.get("/blogs/:id",function(req,res){
         }else{
             res.render("showIt",{blog:foundBlog});
         }
-    })
+    });
 });
 
 app.listen(PORT, function () {
