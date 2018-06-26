@@ -6,7 +6,7 @@
 	<span> <%=blog.created.toDateString()%></span>
 	<div class="ui items">
 		<div class="description">
-			<p><%= blog.body %></p>
+			<p> <%= blog.body.substring(0,15) %> ...</p>
 		</div>
 	</div>
 	<a href="/blogs/<%= blog._id %>"> Read more... </a>

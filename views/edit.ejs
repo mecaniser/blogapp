@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+<div class="ui inverted main text container segment">
+	<div class="ui inverted orange header">Edit <%= blog.title %> </div>
+	<form class="ui inverted form" action="/blogs/<%= blog._id%>?_method=PUT" method="POST">
+		<div class= "field four wide">
+			<label>Title</label>
+			<input type="text" name="blog[title]" value="<%= blog.title %>" >
+		</div>
+		<div class="field">
+			<label>Image</label>
+			<input type="text" name="blog[image]" value="<%= blog.image %>">
+		</div>
+		<div class="ui inverted divider"></div>
+		<div class="field">
+			<label>Blog Story</label>
+			<textarea class="field" type="text" name="blog[body]" placeholder="New Post"> <%= blog.body %> </textarea>
+		</div>
+		<button type="submit" class="ui inverted teal button">Submit</button>
+	</form>
+</div>
+<% include ./partials/footer %>
