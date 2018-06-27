@@ -1,15 +1,34 @@
 <% include ./partials/header %>
+
 <div class="ui inverted main text container segment">
-	<% blogs.forEach(function(blog){ %>
-	<div class="ui inverted red header"><h2><%= blog.title %></h2></div>
-	<div class="item"><img class="ui centered rounded image" src="<%= blog.image %>" alt="blog_img"></div>
-	<span> <%=blog.created.toDateString()%></span>
-	<div class="ui items">
-		<div class="description">
-			<p> <%= blog.body.substring(0,15) %> ...</p>
+
+	<div class="ui huge header"><a href="/blogs">Pedal By Pedal Blog</a></div>
+
+	<div class="ui top attached segment">
+		<div class="ui divided items">
+			<% blogs.forEach(function(blog){%>
+			<div class="item">
+				<div class="image">
+					<img src="<%= blog.image %>" class="ui centered rounded image"  alt="blog_img">
+				</div>
+				<div class="content">
+					<a class="header" href="/blogs/<%= blog._id %>" > <%= blog.title %> </a>
+					<div class="meta">
+				 		<span> <%= blog.created.toDateString() %></span>
+					</div>
+ 					<div class="description">
+ 						<p> <%- blog.body.substring(0,75) %> ...</p>
+ 					</div>
+						<div class="extra">
+							<a class="ui inverted blue button" href="/blogs/<%= blog._id %>" > <%= blog.title %> 
+							<i class="right chevron icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			<% }) %>
 		</div>
 	</div>
-	<a href="/blogs/<%= blog._id %>"> Read more... </a>
 </div>
-<% }) %>
+
 <% include ./partials/footer %>

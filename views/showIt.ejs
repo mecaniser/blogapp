@@ -2,21 +2,24 @@
 
 <div class="ui inverted main text container segment">
 	<div class="ui inverted orange header "> 
-	<h2> <%= blog.title %> </h2> 
-	<a class='ui inverted green button right floated' href= "/blogs/<%= blog._id %>/edit" >Edit</a>
+		<a href="/blogs"><h2> <%= blog.title %> </h2> </a>
+	<div class="ui inverted divider"></div>
+		<a class='ui inverted green button right floated' href= "/blogs/<%= blog._id %>/edit" >Edit</a>
 	</div>
-
 	<div class="item">
-		<img class="ui centered rounded image" src="<%= blog.image %>" alt="blog_img">
+		<div class="image">
+			<img class="ui centered rounded image" src="<%= blog.image %>" alt="blog_img">
+		</div>
 		<div class="content">
 			<span> <%= blog.created.toDateString() %> </span>
 		</div>
 		<div class="description">
-			<p> <%= blog.body %> </p>
+			<p> <%- blog.body %> </p>
 		</div>
 		<div class="meta">
-			<span>Return</span>
-			<a href="/blogs"><%= blog.title %></a>
+			<a href="/blogs">
+			<span>Main page</span>
+			</a>
 		</div>
 		<form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" accept-charset="utf-8">
 			<button class="ui fluid inverted red button ">Delete</button>
