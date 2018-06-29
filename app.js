@@ -116,6 +116,11 @@ app.delete("/blogs/:id", function(req,res){
     });
 });
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
+
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
+
 app.listen(PORT, function () {
     console.log("App listening on PORT http://localhost:" + PORT);
 });
