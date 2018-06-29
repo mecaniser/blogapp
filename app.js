@@ -11,7 +11,6 @@ var PORT        = process.env.PORT || 3036;
 mongoose.connect("mongodb://localhost/mecaniser_rest_app");
 
 //App config
-app.listen(process.env.PORT || 3000);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -54,13 +53,13 @@ app.get("/blogs/new", function(req,res){
 app.post("/blogs", function(req,res){
 
     //Sanitizer
-    console.log(req.body);
+    // console.log(req.body);
 
     req.body.blog.body = req.sanitize(req.body.blog.body);
 
-    console.log("---------------------------------------");
+    // console.log("---------------------------------------");
 
-    console.log(req.body);
+    // console.log(req.body);
 
     Blog.create(req.body.blog, function(err, newBlog){
 if(err){
@@ -117,10 +116,23 @@ app.delete("/blogs/:id", function(req,res){
     });
 });
 
+app.listen(process.env.PORT || 3000);
+
+
+
+
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
+
+mongoose.connect(MONGODB_URI, function (err, res) {
+    if (err) {
+    console.log ('ERROR connecting to: ' + MONGODB_URI + '. ' + err);
+    } else {
+    console.log ('Succeeded connected to: ' + MONGODB_URI);
+    }
+  });
 
 app.listen(PORT, function () {
     console.log("App listening on PORT http://localhost:" + PORT);
