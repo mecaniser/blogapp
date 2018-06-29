@@ -120,7 +120,6 @@ app.delete("/blogs/:id", function(req,res){
 
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
 
-app.listen(process.env.PORT || 3000);
 
 
 var MONGODB_URI = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||'mongodb://localhost/mecaniser_rest_app';
@@ -136,6 +135,8 @@ mongoose.connect(MONGODB_URI, function (err, res) {
     }
   });
 
-app.listen(PORT, function () {
-    console.log("App listening on PORT http://localhost:" + PORT);
-});
+app.listen(process.env.PORT || 3000);
+
+// app.listen(PORT, function () {
+    // console.log("App listening on PORT http://localhost:" + PORT);
+// });
