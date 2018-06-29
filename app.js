@@ -1,3 +1,4 @@
+var http        = require ('http'); 
 var bodyParser  = require("body-parser");
 var mongoose    = require("mongoose");
 var express     = require("express");
@@ -116,15 +117,16 @@ app.delete("/blogs/:id", function(req,res){
     });
 });
 
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
+
 app.listen(process.env.PORT || 3000);
 
 
+var MONGODB_URI = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||'mongodb://localhost/mecaniser_rest_app"';
 
-
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
-
-mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+// mongoose.Promise = Promise;
+// mongoose.connect(MONGODB_URI);
 
 mongoose.connect(MONGODB_URI, function (err, res) {
     if (err) {
