@@ -11,7 +11,7 @@ var PORT        = process.env.PORT || 3036;
 mongoose.connect("mongodb://localhost/mecaniser_rest_app");
 
 //App config
-
+app.listen(process.env.PORT || 3000);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
