@@ -1,4 +1,3 @@
-var http        = require ('http'); 
 var bodyParser  = require("body-parser");
 var mongoose    = require("mongoose");
 var express     = require("express");
@@ -9,7 +8,7 @@ var methodOvrrd = require("method-override");
 
 var PORT        = process.env.PORT || 3036;
 
-mongoose.connect("mongodb://localhost/mecaniser_rest_app");
+// mongoose.connect("mongodb://localhost/mecaniser_rest_app");
 
 //App config
 app.set("view engine", "ejs");
@@ -20,6 +19,7 @@ app.use(methodOvrrd("_method"));
 
 
 // Mogoose - model config
+
 var blgSchema = new mongoose.Schema({
     title: String,
     body: String,
