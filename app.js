@@ -6,7 +6,7 @@ var exprsSntzr  = require("express-sanitizer");
 var app         = express();
 var methodOvrrd = require("method-override");
 
-var PORT        = process.env.PORT || 3036;
+// var PORT        = process.env.PORT || 3036;
 
 // mongoose.connect("mongodb://localhost/mecaniser_rest_app");
 
