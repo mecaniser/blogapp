@@ -127,14 +127,6 @@ app.delete("/blogs/:id", function(req,res){
 // mongoose.Promise = Promise;
 // mongoose.connect(MONGODB_URI);
 
-// mongoose.connect(MONGODB_URI, function (err, res) {
-    // if (err) {
-    // console.log ('ERROR connecting to: ' + MONGODB_URI + '. ' + err);
-    // } else {
-    // console.log ('Succeeded connected to: ' + MONGODB_URI);
-    // }
-//   });
-
 // app.listen(process.env.PORT || 3000);
 ////////////////////////////////////////
 // app.listen(PORT, function () {
@@ -147,8 +139,15 @@ console.log("App listening on PORT http://localhost:" + PORT);
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
 
 // mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+// mongoose.connect(MONGODB_URI);
 
+mongoose.connect(MONGODB_URI, function (err, res) {
+    if (err) {
+    console.log ('ERROR connecting to: ' + MONGODB_URI + '. ' + err);
+    } else {
+    console.log ('Succeeded connected to: ' + MONGODB_URI);
+    }
+  });
 app.listen(PORT, function() {
   console.log("App running on port " + PORT);
 });
