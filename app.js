@@ -14,7 +14,7 @@ app.use(exprsSntzr());
 app.use(methodOvrrd("_method"));
 
 
-// Mogoose - model config
+// Mongoose - model config
 
 var blgSchema = new mongoose.Schema({
     title: String,
