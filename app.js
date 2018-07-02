@@ -6,10 +6,6 @@ var exprsSntzr  = require("express-sanitizer");
 var app         = express();
 var methodOvrrd = require("method-override");
 
-// var PORT        = process.env.PORT || 3036;
-
-// mongoose.connect("mongodb://localhost/mecaniser_rest_app");
-
 //App config
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -117,32 +113,13 @@ app.delete("/blogs/:id", function(req,res){
     });
 });
 
-
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
-
-
-
-// var MONGODB_URI = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||'mongodb://localhost/mecaniser_rest_app';
-
-// mongoose.Promise = Promise;
-// mongoose.connect(MONGODB_URI);
-
-// app.listen(process.env.PORT || 3000);
-// app.listen(PORT, function () {
-// });
-
 var PORT = process.env.PORT || 3000;
-console.log("App listening on PORT http://localhost:" + PORT);
-
+// console.log("App listening on PORT http://localhost:" + PORT);
 
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniser_rest_app";
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://mecaniser:bacardi888@ds123171.mlab.com:23171/heroku_bg825klm";
 
-
-// mongoose.Promise = Promise;
-// mongoose.connect(MONGODB_URI);
-//mongodb://mecaniser:bacardi888@ds123171.mlab.com:23171/heroku_bg825klm 
 mongoose.connect(MONGODB_URI, function (err, res) {
     if (err) {
     console.log ('ERROR connecting to: ' + MONGODB_URI + '. ' + err);
@@ -151,5 +128,5 @@ mongoose.connect(MONGODB_URI, function (err, res) {
     }
   });
 app.listen(PORT, function() {
-  console.log("App running on port " + PORT);
+//   console.log("App running on port " + PORT);
 });
