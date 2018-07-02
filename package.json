@@ -16,5 +16,14 @@
     "method-override": "^2.3.10",
     "mongodb": "^3.1.0",
     "mongoose": "^5.0.16"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mecaniser/blogapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mecaniser/blogapp/issues"
+  },
+  "homepage": "https://github.com/mecaniser/blogapp#readme"
 }
