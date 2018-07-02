@@ -113,20 +113,21 @@ app.delete("/blogs/:id", function(req,res){
     });
 });
 
-console.log('Connected to the Development DB: ' + process.env.DATABASEURL);
+// console.log('Connected to the Development DB: ' + process.env.DATABASEURL);
 
 // console.log("App listening on PORT http://localhost:" + PORT);
 
 // var MONGOLAB_RED_URI = process.env.MONGOLAB_RED_URI || "mongodb://localhost/mecaniser_rest_app";
 
 // var MONGOLAB_RED_URI = process.env.MONGOLAB_RED_URI || "mongodb://mecaniser:bacardi888@ds123171.mlab.com:23171/heroku_bg825klm";
+var dataBase = process.env.DATABASEURL;
 
-mongoose.connect(process.env.DATABASEURL, function (err, res) {
+mongoose.connect(dataBase, function (err, res) {
 
     if (err) {
-    console.log ('ERROR connecting to: ' + DATABASEURL + '. ' + err);
+    console.log ('ERROR connecting to: ' + dataBase+ '. ' + err);
     } else {
-    console.log ('Succeeded connected to HEROKU DB: ' + DATABASEURL);
+    console.log ('Succeeded connected to HEROKU DB: ' + dataBase);
     }
   });
 
